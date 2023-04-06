@@ -12,11 +12,11 @@ form.addEventListener("submit",(event) => {
         return;
     }
 
-    if(nameInput.value ==="" || !emailValid(emailInput.value, 8)){
+    if(emailInput.value ==="" || !emailValid(emailInput.value,)){
         alert("Campo De Email Está Vazio");
         return;
     }
-    if(!validatePassword.value){
+    if(!validatePassword.value(passwordInput.value, 8)){
         alert("A senha precisa ser no minimo 8 digitos");
         return;
     }
